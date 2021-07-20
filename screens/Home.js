@@ -15,9 +15,17 @@ export default class HomeScreen extends Component{
             <View style={styles.container}>
                 <SafeAreaView style={styles.droidSafeArea} />
                 <ImageBackground source={require('../assets/bg2.jpg')} style={styles.backgroundImage}>
+                <View style={styles.appIcon}>
+                        <Image
+                            source={require("../assets/logo.png")}
+                            style={styles.iconImage}
+                        ></Image>
+                    </View>
+                    
                 <View style={styles.titleBar}>
                     <Text style={styles.titleText}> FUNLEARN </Text>
                 </View>
+               
 
                 <TouchableOpacity style={styles.routeCard}
                 onPress={()=>this.props.navigation.navigate("Main")} 
@@ -25,6 +33,8 @@ export default class HomeScreen extends Component{
                   <Text style={styles.clickHere}> Click here to Learn--- </Text>
                   <Image source={require("../assets/play.png")} style={styles.iconImage}></Image>
                 </TouchableOpacity>
+                
+               
                 </ImageBackground>
             </View>
         )
@@ -73,4 +83,25 @@ const styles = StyleSheet.create({
         top: 30,
         marginRight:70
     },
+    disclaimer1:{
+        marginTop:320,
+        marginLeft:200,
+        fontSize:20,
+        color:"white"
+    },
+    disclaimer2:{
+        marginTop:0,
+        marginLeft:200,
+        fontSize:20,
+        color:"white"
+    },
+    appIcon:{
+        flex:0.1,
+        height:50,
+       top:30,
+       bottom:10,
+       right:45,
+       
+    }
+    
 })

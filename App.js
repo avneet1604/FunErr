@@ -6,6 +6,7 @@ import HomeScreen from "./screens/Home";
 import MatchScreen from "./screens/Match";
 import WriteScreen from "./screens/Write";
 import TrainScreen from "./screens/Train";
+import CountScreen from "./screens/Count";
 
 const Stack= createStackNavigator();
 
@@ -19,6 +20,8 @@ function App() {
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen name="Write" component={WriteScreen} />
         <Stack.Screen name="Match" component={MatchScreen} />
+        <Stack.Screen name="Train" component={TrainScreen} />
+        <Stack.Screen name="Count" component={CountScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
