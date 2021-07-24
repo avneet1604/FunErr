@@ -18,10 +18,15 @@ export default class MainScreen extends Component{
              <SafeAreaView style={styles.droidSafeArea} />
              <ImageBackground source={require('../assets/bg3.jpg')} style={styles.backgroundImage}>
              
+             <Image
+              source={require("../assets/logo.png")}
+              style={styles.appIcon}
+            ></Image>
+             
              <View style={styles.titleBar}>
                 <Text style={styles.titleText}>FUNLEARN</Text>
              </View>
-            
+
              <TouchableOpacity style={styles.routeCardW} onPress={() =>
                 this.props.navigation.navigate("Write")
              }>
@@ -49,8 +54,11 @@ export default class MainScreen extends Component{
                 <Text style={styles.routeText}>Fun Counting</Text>
                 <Image source={require("../assets/numbers1.jpg")} style={styles.iconImage4}></Image>
             </TouchableOpacity>
-            </ImageBackground>
-           </View>
+
+             </ImageBackground>
+             </View>
+            
+            
         )
     }
 }
@@ -67,52 +75,44 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
     },
     routeCardW: {
-        flex: 0.5,
-        height: 90,
-        width:150,
-        marginLeft: 30,
-        //marginRight: 50,
-        top: 100,
-        //bottom:0,
-        borderRadius: 30,
-        backgroundColor: 'white'
+        flex:0.25,
+        marginLeft:50,
+        marginRight:50,
+        marginTop:20,
+        borderRadius:30,
+        backgroundColor:'white',
+        bottom:20
     },
     routeCardM: {
-        flex: 0.5,
-        height: 60,
-        width:150,
-        marginLeft: 200,
-        //marginRight: 50,
-        //marginTop: 90,
-        bottom:105,
-        top:-55,
-        borderRadius: 30,
-        backgroundColor: 'white'
+        flex:0.25,
+        marginLeft:50,
+        marginRight:50,
+        marginTop:20,
+        borderRadius:30,
+        backgroundColor:'white',
+        bottom:20
     },
     routeCardT: {
-        flex: 0.5,
-        height: 50,
-        width:150,
-        marginLeft: 30,
-        marginRight: 50,
-        marginTop: 20,
-        //bottom:120,
-        borderRadius: 30,
-        backgroundColor: 'white'
+        flex:0.25,
+        marginLeft:50,
+        marginRight:50,
+        marginTop:20,
+        borderRadius:30,
+        backgroundColor:'white',
+        bottom:20
     },
     routeCardC: {
-        flex: 0.5,
-        height: 30,
-        width:150,
-        marginLeft: 200,
-        //marginRight: 50,
-        //marginTop: 0,
-        bottom:145,
-        borderRadius: 30,
-        backgroundColor: 'white'
+        flex:0.25,
+        marginLeft:50,
+        marginRight:50,
+        marginTop:20,
+        borderRadius:30,
+        backgroundColor:'white',
+        bottom:20
+
     },
     titleBar: {
-        flex: 0.15,
+        flex: 0.1,
         justifyContent: "center",
         alignItems: "center"
     },
@@ -120,7 +120,8 @@ const styles = StyleSheet.create({
         fontSize: 40,
         fontWeight: "bold",
         color: "black",
-        marginTop:50
+        marginTop:-165,
+        marginLeft:50
     },
     routeText: {
         fontSize: 25,
@@ -135,7 +136,7 @@ const styles = StyleSheet.create({
         width: 90,
         resizeMode: "contain",
         right: 5,
-        top: 50
+        top: 0
     },
     iconImage2: {
         position: "absolute",
@@ -143,22 +144,27 @@ const styles = StyleSheet.create({
         width: 120,
         resizeMode: "contain",
         right:10,
-        top: 55
+        top:0
     },
     iconImage3: {
         position: "absolute",
         height: 90,
         width: 150,
         resizeMode: "contain",
-        right: 9,
-        top: 80
+        right: -30,
+        top: 0
     },
     iconImage4: {
         position: "absolute",
         height: 50,
         width: 80,
         resizeMode: "contain",
-        right: 30,
-       top: 90
+        right: 20,
+       top: 15
     },
+    appIcon: {
+        resizeMode: "contain",
+        width:110,
+        height:110
+      }
 });
